@@ -1,0 +1,212 @@
+.section__clients {
+    background-image: url(../img/bg-clients.webp);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../img/bg-clients@2x.webp');
+    }
+    background-position: right top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container__clients {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 98wv;
+    height: 98vh;
+    background-image: url(../img/bg-mobile-flowers.webp);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../img/bg-mobile-flowers@2x.webp');
+    }
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    &--navback {
+        position: absolute;
+        z-index: 98;
+        top: 2vh;
+        left: 0vw;
+        fill: $greyDark;
+        transition-property: scale;
+        transition-duration: 250ms;
+        animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+        scale: 1;
+        &:hover,
+        &:focus {
+            fill: $greyLight;
+            transition-property: scale;
+            transition-duration: 250ms;
+            animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+            scale: 1.5;
+        }
+    }
+    &--navforward {
+        position: absolute;
+        z-index: 99;
+        bottom: 2vh;
+        right: 0;
+        fill: $redLight;
+        transition-property: scale;
+        transition-duration: 250ms;
+        animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+        scale: 1;
+        &:hover,
+        &:focus {
+            fill: $redDark;
+            transition-property: scale;
+            transition-duration: 250ms;
+            animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+            scale: 1.5;
+        }
+    }
+    
+}
+.clients1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35vw;
+    height: 96vh;
+    background-image: url(../img/bg-clients-flowers.webp);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../img/bg-mobile-flowers@2x.webp');
+    }
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    /*outline: 1px solid orange;*/
+}
+.clients2 {
+    position: absolute;
+    top: 0;
+    left: 35vw;
+    width: 63vw;
+    height: 96vh;
+    z-index: 11;
+    /*outline: 1px solid green;*/
+    overflow-x: hidden;
+}
+
+.swiper {
+    margin-top: 5vh;
+    width: 480px;
+    height: 640px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 18px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  .swiper-slide__name {
+    font-family: Oswald;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .swiper-slide:nth-child(1n) {
+    background-color: rgb(206, 17, 17);
+  }
+
+  .swiper-slide:nth-child(2n) {
+    background-color: rgb(0, 140, 255);
+  }
+
+  .swiper-slide:nth-child(3n) {
+    background-color: rgb(10, 184, 111);
+  }
+
+  .swiper-slide:nth-child(4n) {
+    background-color: rgb(211, 122, 7);
+  }
+
+  .swiper-slide:nth-child(5n) {
+    background-color: rgb(118, 163, 12);
+  }
+
+  .swiper-slide:nth-child(6n) {
+    background-color: rgb(180, 10, 47);
+  }
+
+  .swiper-slide:nth-child(7n) {
+    background-color: rgb(35, 99, 19);
+  }
+
+  .swiper-slide:nth-child(8n) {
+    background-color: rgb(0, 68, 255);
+  }
+
+  .swiper-slide:nth-child(9n) {
+    background-color: rgb(218, 12, 218);
+  }
+
+  .swiper-slide:nth-child(10n) {
+    background-color: rgb(54, 94, 77);
+  }
+
+.clients__info {
+    position: absolute;
+    top: 10vh;
+    left: 4vw;
+    z-index: 20;
+}
+.clients__info-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: Oswald;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: $greyLight;
+    fill: $greyLight;
+    text-transform: uppercase;
+    scale: 1;
+    transition-property: scale;
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    transition-duration: 250ms;
+    &:hover {
+        scale: 1.1;
+    }
+    &--first {
+        animation-delay: 500ms;
+        animation-duration: 250ms;
+        
+    }
+    &--second {
+      margin-top: -120px;
+        animation-delay: 1000ms;
+        animation-duration: 250ms;
+        
+    }
+    &--third {
+        animation-delay: 1500ms;
+        animation-duration: 250ms;
+        &:hover > .lighthouse {
+            opacity: 1;
+            transition-property: opacity;
+            animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+            transition-duration: 250ms;
+        }
+    }
+}
+.svg-checkbox {
+    margin-top: 10px;
+}
+.lighthouse {
+    opacity:0;
+    transition-property: opacity;
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    transition-duration: 250ms;
+}

@@ -1,0 +1,163 @@
+body {
+    overflow: hidden;
+      /*background: rgb(145, 17, 17); */
+      background: radial-gradient(circle, rgb(104, 14, 14) 0%, rgb(78, 8, 8) 100%);
+      background-color: #c1b2b5;
+      font-family: Raleway;
+  }
+  .intro {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+  
+      &::before,
+      &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 100%;
+          z-index: 2;
+          box-shadow: 0 0 20px 20px #A10115;
+      }
+  
+      &::before {
+          width: 400px;
+          height: 400px;
+          background-color: #A10115;
+      }
+  
+      &::after {
+          width: 250px;
+          height: 250px;
+          background-color: #fff;
+          animation: circle-size 1200ms linear infinite alternate;
+          opacity: 0.85;
+      }
+      &-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-55%, -50%) /*scale(5)*/;
+        display: block;
+        z-index: 9;
+
+        &-presents {
+          padding-left: 76px;
+          font-size: 11px;
+          text-transform: uppercase;
+          color: #333;
+          letter-spacing: 0.1em;
+          }
+      }
+
+      &-graphic {
+        width: 800px;
+        height: 800px;
+        position: relative;
+        display: block;
+        background-image: url(../img/bg-intro.webp);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../img/bg-intro@2x.webp');
+        }
+        background-position: top;
+        background-repeat: no-repeat;
+        z-index: 10;
+      }
+
+      &-button {
+        position: absolute;
+        top: 50%;
+          left: 50%;
+          transform: translate(-55%, -50%) /*scale(5)*/;
+          display: block;
+          z-index: 11;
+          margin-top: 120px;
+      }
+  
+      &-shadow {
+          width: 400px;
+          height: 400px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          //transform: translate(-50%, -50%);
+          border-radius: 100%;
+          z-index: 1;
+          box-shadow: 10px -55px 30px 15px #d72d16, 24px -10px 47px 10px #db4d3a, -21px -25px 97px 10px #e97565, 51px 5px 17px 10px #e94e3a, 3px 2px 77px 10px #f30bf5;
+          animation: shadow-rotate 2.5s linear infinite;
+          transform-origin: center;
+      }
+  }
+  
+  @keyframes circle-size {
+      from {
+          width: 250px;
+          height: 250px;
+      }
+      to {
+          width: 300px;
+          height: 300px;
+      }
+  }
+  
+  @keyframes shadow-rotate {
+      from {
+          transform: translate(-50%, -50%) rotate(0deg);
+      }
+      to {
+          transform: translate(-50%, -50%) rotate(360deg);
+      }
+  }
+
+.logo {
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
+}
+.logo-animate {
+    animation: logo-anim 5000ms;
+  }
+  @keyframes logo-anim {
+    0%    { opacity: 0; scale: 1.5}
+    50%    { opacity: 0; scale: 1.5}
+    100%  { opacity: 1; scale: 1}
+  }
+.tooltip {
+  text-decoration: none;
+}
+  
+.tooltip .tooltiptext {
+  width: 220px;
+  background-color: #a00115;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: -10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 500ms;
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:focus .tooltiptext {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 500ms;
+
+}
+.tooltiptext-big {
+  font-size: 22px;
+  font-weight: bold;
+}
